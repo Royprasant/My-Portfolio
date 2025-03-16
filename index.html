@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>PRASHANTA KUMAR ROY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Patrick+Hand+SC&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">ROY</a>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="Home god">
+        <div class="home-img">
+            <img src="Me.jpeg" alt="Main" oncontextmenu="return false;">
+        </div>
+        <div class="maincontent">
+            <h1>Hi, it's <span class="spancolor">Prashanta Kumar Roy</span></h1>
+            <h3 class="typing-text">I'm a <span id="element" class="spancolor"></span></h3>
+            <p>Integrating analytical reasoning with creative problem-solving to develop innovative solutions in both physical and digital domains.</p>
+            <div class="socials">
+                <a href="https://github.com/Royprasant" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://in.linkedin.com/in/prashanta-kumar-roy-01" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/roy_.9._" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://x.com/roy__9_" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <a href="Prashanta's Resume.pdf" download="Prashanta's Resume" class="click">Download Resume</a>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer">
+            &copy; 2025 Prashanta Kumar Roy. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

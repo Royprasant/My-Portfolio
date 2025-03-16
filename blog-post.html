@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">ROY</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-container">
+            <article class="blog-post">
+                <h2 id="post-title"></h2>
+                <p class="post-meta" id="post-date"></p>
+                <div id="post-content" class="post-blog"></div>
+            </article>
+
+            <!-- Back Button -->
+            <button class="back-button" onclick="goBack()">← Back to Blog</button>
+        </section>
+    </main>
+
+    <script>
+    const posts = {
+        "1": {
+            title: "The Role of Green Chemistry in Sustainable Chemical Engineering",
+            date: "March 16, 2025",
+            content: `<p>In the modern age, where environmental concerns are at the forefront, green chemistry has emerged as a pivotal approach in sustainable chemical engineering. This innovative field focuses on designing products and processes that minimize the use and generation of hazardous substances, thereby promoting environmental and human health. Here's a deeper dive into how green chemistry is reshaping the landscape of chemical engineering.</p>
+                        <br>
+                      <h3>1. Understanding Green Chemistry</h3>
+                      <p>Green chemistry, often referred to as sustainable chemistry, is the practice of creating chemical products and processes that reduce or eliminate the use of toxic substances. It encompasses a wide range of strategies to make chemical production more environmentally friendly, from the choice of raw materials to waste management.</p>
+                      <br>
+                      <h3>2. Principles of Green Chemistry</h3>
+                      <p>The cornerstone of green chemistry is its 12 principles, developed by Paul Anastas and John Warner, which serve as guidelines for making chemical processes more sustainable. These principles include waste prevention, designing less hazardous chemical syntheses, using renewable feedstocks, and increasing energy efficiency.</p>
+                      <br>
+                      <h3>3. Implementation in Chemical Engineering</h3>
+                      <p>In chemical engineering, these principles translate into several practical applications:</p>
+                      <p><b>Use of Alternative Feedstocks:</b> Engineers are shifting towards renewable feedstocks such as biomass instead of non-renewable sources like petroleum. This not only reduces dependence on fossil fuels but also decreases greenhouse gas emissions.</p>
+<p><b>Designing Safer Chemicals:</b> New methods are being developed to create chemicals that are less hazardous to both human health and the environment. For example, the development of less toxic pesticides and solvents.</p>
+<p><b>Energy-Efficient Processes:</b> Enhancements in process engineering techniques, such as the adoption of low-temperature reactions and the use of catalysts, help minimize energy consumption and improve overall efficiency.</p>
+<p><b>Waste Minimization:</b> Innovative technologies, such as closed-loop systems, are being employed to reduce waste production and ensure that any waste generated is non-toxic and recyclable.</p>
+<br>
+<h3>4. Challenges and Opportunities</h3>
+<p>While the principles of green chemistry offer significant promise, there are challenges to their widespread adoption. These include the initial costs of technology development, the need for regulatory support, and the requirement for a shift in industry mindset. However, the opportunities for innovation, cost savings, and environmental preservation make green chemistry a critical element of sustainable development.</p>
+<br>
+<h3>5. The Future of Green Chemistry</h3>
+<p>As awareness and technology advance, green chemistry will play a crucial role in achieving sustainability goals. The integration of digital tools, such as AI and machine learning, can further enhance the efficiency and impact of green chemistry practices. As chemical engineers continue to innovate, the future holds great potential for a more sustainable and environmentally friendly chemical industry.</p>`
+                      
+        },
+        "2": {
+            title: "My Journey: The Struggles and Triumphs of Building a Website with HTML, CSS, and JavaScript",
+            date: "March 10, 2025",
+            content: `<p>Building a website may seem like a simple task, especially when you see the polished, finished products on the internet. However, the process of actually creating one from scratch involves a lot of hard work, problem-solving, and sometimes frustration. In this blog post, I’ll take you through the struggles I faced while building my website using HTML, CSS, and JavaScript, and how I overcame each of them to create a website that I'm proud of.</p>
+                        <br>
+                      <h3>1. The Challenge of Structuring the Website (HTML)</h3>
+                      <p>When I first started building my website, one of the biggest hurdles was figuring out how to structure it using HTML. At first, I was overwhelmed by the vast array of tags and elements I needed to organize. Should I use &ltdiv&gt for everything? What about &ltheader&gt, &ltfooter&gt, and other semantic elements?</p>
+                      <p>It took me a while to understand the importance of semantic HTML. I learned that using the right tags not only improves accessibility but also helps with SEO and overall website structure. Organizing my content in a meaningful way made it easier to manage as I added more features.</p>
+                      <br>
+                      <h3>2. Making the Website Visually Appealing (CSS)</h3>
+                      <p>Once the structure was in place, the next challenge was styling the website. CSS is powerful, but sometimes it can be a bit tricky to get everything to look just right. One of the major struggles I faced was making the layout responsive and ensuring that the design looked great on both desktop and mobile devices.</p>
+                      <p>The concept of responsive design was new to me, and using media queries to adapt the layout for different screen sizes felt like a daunting task. There were moments when elements would overlap, or the text would look too small on smaller screens, and I couldn’t quite figure out why.</p>
+                      <p>After spending a lot of time reading tutorials, experimenting with flexbox and grid, and tweaking my CSS, I finally managed to create a fluid, responsive layout. I also learned the value of testing the website across different devices and browsers to make sure everything was functioning as expected.</p>
+                      <br>
+                      <h3>3. Adding Interactivity (JavaScript)</h3>
+                      <p>This was where things got really interesting—and a bit frustrating. I wanted to add some interactive features to my website, like animations, dynamic text, and smooth transitions. For example, I implemented a typing animation using the <b>Typed.js</b> library, which was amazing to see in action. However, I encountered issues when it came to integrating the animation with the overall design.</p>
+                      <p>JavaScript's asynchronous nature also caused some confusion. I had to learn how to properly handle events like clicks, page load, and key presses. One of the biggest struggles was preventing the default behavior of links and buttons when implementing custom animations. I also faced challenges in managing complex DOM manipulation, such as adding classes for animations or preventing certain actions like right-clicking or opening developer tools.</p>
+<p>Debugging JavaScript was another struggle. I had moments where the code just wasn’t working, and I didn’t understand why. I learned the importance of the browser’s developer tools, using console.log() to track the flow of my code, and how to properly debug and optimize it.</p>
+<br>
+<h3>4. The Frustration of Cross-Browser Compatibility</h3>
+<p>One of the most frustrating aspects of building the website was making sure it worked across different browsers. While my website looked perfect in Chrome, it didn’t always behave the same in Firefox or Safari. Some CSS styles weren’t rendered the same way, and some JavaScript features didn’t work as expected in other browsers.</p>
+<p>I quickly learned that cross-browser compatibility is essential. I spent time researching the differences in how browsers interpret code and used tools like Can I Use to check which CSS properties and JavaScript functions were supported by different browsers.</p>
+<br>
+<h3>5. Dealing with Performance Issues</h3>
+<p>As the website grew more complex, performance started to become an issue. Animations and JavaScript-heavy features were slowing things down, and I started to worry about page load times. I researched techniques like lazy loading, optimizing images, and reducing JavaScript file sizes. Implementing these strategies helped improve performance, but it was a reminder that building an efficient, fast website takes careful thought and consideration.</p>
+<br>
+<h3>6. The Importance of Persistence</h3>
+<p>Throughout the process, one of the most valuable lessons I learned was the importance of persistence. There were many times when I felt stuck, frustrated, and ready to give up, but each challenge was an opportunity to learn something new. Whether it was fixing a bug in my JavaScript code or understanding how to structure my HTML more efficiently, every setback led to personal growth.</p>
+<p>Eventually, all the struggles paid off, and I ended up with a website that not only works well but also looks great. The process wasn’t easy, but it was definitely worth it.</p>`
+        },
+        "4": {
+            title: "Minecraft Survival Tips for Beginners",
+            date: "February 25, 2025",
+            content: `<p>Here are some essential survival tips:</p>
+                      <h3>1. Gather Resources</h3>
+                      <p>Start by collecting wood, stone, and food to survive...</p>`
+        }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get("id");
+
+    if (posts[postId]) {
+        document.getElementById("post-title").innerText = posts[postId].title;
+        document.getElementById("post-date").innerText = `Posted on ${posts[postId].date} | By Prashanta Kumar Roy`;
+        document.getElementById("post-content").innerHTML = posts[postId].content;
+    } else {
+        document.getElementById("post-content").innerHTML = "<p>Post not found.</p>";
+    }
+
+    // Back Button Function
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+</body>
+</html>

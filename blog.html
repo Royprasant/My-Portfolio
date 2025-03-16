@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>BLOG - PRASHANTA KUMAR ROY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Patrick+Hand+SC&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">ROY</a>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" id="menu-icon">
+        <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="blog-container" id="blog-list"></section>
+    </main>
+    
+    <script>
+    const posts = [
+        {
+            id: "1",
+            title: "The Role of Green Chemistry in Sustainable Chemical Engineering",
+            date: "March 16, 2025",
+            excerpt: "Green chemistry, or sustainable chemistry, aims to create chemical products and processes that minimize the use and generation of hazardous substances.  By using renewable feedstocks, designing safer chemicals, and implementing energy-efficient processes, green chemistry promotes environmental and human health.  Despite challenges, green chemistry offers significant opportunities for innovation and cost savings....",
+        },
+        {
+            id: "2",
+            title: "My Journey: The Struggles and Triumphs of Building a Website with HTML, CSS, and JavaScript",
+            date: "March 10, 2025",
+            excerpt: "Building a website from scratch using HTML, CSS, and JavaScript is a challenging yet rewarding experience.  The process involves mastering HTML structure, CSS styling, and JavaScript interactivity, while also ensuring cross-browser compatibility and optimizing performance.  Despite the frustrations and setbacks, persistence and a willingness to learn are key to overcoming obstacles and creating a functional and visually appealing website....",
+        },
+        {
+            id: "3",
+            title: "To be posted soon...!!",
+            date: "N/A",
+            excerpt: "Have a Great Day...",
+        }
+    ];
+    
+    const blogContainer = document.getElementById("blog-list");
+    
+    posts.forEach(post => {
+        const article = document.createElement("article");
+        article.classList.add("blog-post");
+        
+        article.innerHTML = `
+            <h2>${post.title}</h2>
+            <p class="post-meta">Posted on ${post.date} | By Prashanta Kumar Roy</p>
+            <p class="post-blog">${post.excerpt}</p>
+            <a href="blog-post.html?id=${post.id}" class="read-more">Read More</a>
+        `;
+        
+        blogContainer.appendChild(article);
+    });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

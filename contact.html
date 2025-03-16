@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>CONTACT - PRASHANTA KUMAR ROY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Patrick+Hand+SC&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">ROY</a>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="menu-icon" id="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+  <section>
+  <div class="form-container">
+    <h2>Contact Me</h2>
+    <!-- Change the URL below to the Web App URL you get from Google Apps Script -->
+    <form id="googleSheetsForm" method="POST" action="https://script.google.com/macros/s/AKfycbxYM5ShxUwz5Elkbss-nrMXYk9Kx3sBA-HxP3sKsp0JoTNlll-oOTQFhJK91adbmVf4/exec">
+        <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
+        <input type="email" id="email" name="email" placeholder="Email Address" autocomplete="email" required>
+        <input type="tel" id="contact" name="contact" placeholder="Contact Number" autocomplete="tel" required>
+        <textarea id="message" name="message" placeholder="Your Message" autocomplete="off" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <p id="responseMessage"></p>
+</div>
+</section>
+  <footer>
+    <div class="footer">
+      &copy; 2025 Prashanta Kumar Roy. All Rights Reserved.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+  // Handle form submission using AJAX
+  document.getElementById('googleSheetsForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    var formData = new FormData(this); // Get form data
+
+    // Create an AJAX request
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxYM5ShxUwz5Elkbss-nrMXYk9Kx3sBA-HxP3sKsp0JoTNlll-oOTQFhJK91adbmVf4/exec', true); // Replace with your script's Web App URL
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // If the request is successful, show the success message
+        document.getElementById('responseMessage').textContent = 'Form submitted successfully!';
+        document.getElementById('responseMessage').style.color = 'green';
+        // Optionally, you can clear the form fields after submission
+        document.getElementById('googleSheetsForm').reset();
+      } else {
+        // If there's an error, show the error message
+        document.getElementById('responseMessage').textContent = 'There was an error submitting the form. Please try again.';
+        document.getElementById('responseMessage').style.color = 'red';
+      }
+    };
+    xhr.send(formData); // Send the form data
+  });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,818 @@
+/* //Fonts */
+
+/* .press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  } */
+/* 
+  .great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  .patrick-hand-sc-regular {
+    font-family: "Patrick Hand SC", cursive;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  
+
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+
+/* Bottom-to-Top Animation for .god */
+.god {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Initially visible */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    /* height: 100vh; */
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5.9%;
+    background-color: black;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-family: "Press Start 2P", system-ui;
+    font-size: 3rem;
+    color: rgb(81, 81, 223);
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.3);
+}
+
+/* General link styling */
+nav a {
+    font-size: 1.6rem;
+    color: white;
+    padding: 10px 15px; /* Adds some padding for better spacing */
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-right: 2rem; /* Adjust for consistent spacing */
+}
+
+/* Hover and Active link styling */
+nav a:hover, nav a:active {
+    color: rgb(81, 81, 223);
+    border-bottom: 3.5px solid rgb(81, 81, 223);
+}
+
+/* Highlight active link (only if it's the current page) */
+nav a.active {
+    color: rgb(81, 81, 223);
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+    nav a {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.maincontent h1{
+    font-size: 4rem;
+}
+
+.Home maincontent h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.maincontent h1 span{
+    font-family: "Great Vibes", cursive;
+    letter-spacing: 0.5rem;
+    font-size: 5.07rem;
+    white-space: nowrap;
+}
+
+.spancolor{
+    color: rgb(81, 81, 223);
+}
+
+.maincontent h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.maincontent h3 span{
+    font-family: "Patrick Hand SC", cursive;
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+}
+
+.maincontent p{
+    font-size: 1.2rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgb(81, 81, 223);
+    cursor: pointer;
+    -webkit-user-drag: none;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+        animation: animate 1.5s infinite ease-in-out;
+}
+
+@keyframes animate{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.03;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.socials a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(81, 81, 223);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: rgb(81, 81, 223);
+}
+
+.socials a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(81, 81, 223);
+    box-shadow: 0 0 25px solid rgb(81, 81, 223);
+}
+
+.click{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 9rem;
+    font-size: 1.5rem;
+    color: rgb(81, 81, 223);
+    letter-spacing: 0.18rem;
+    font-weight: 800;
+    border: 2px solid rgb(81, 81, 223);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.click:hover{
+    transform: scale3d(1.03);
+    background-color: rgb(81, 81, 223);
+    color: black;
+    box-shadow: 0 0 25px solid rgb(81, 81, 223);
+}
+
+.typing-text{
+    font-size: 34rem;
+    font-weight: 700;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+}
+
+footer {
+    color: #808080;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+/* ---------------------ABOUT PAGE----------------------- */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    width: 100%;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Profile Image */
+.about-img img {
+    width: 26vw;
+    height: auto;
+    border-radius: 10rem;
+    margin-right: 3rem;
+    margin-left: 5rem;
+}
+
+/* About Content */
+.about-content h1{
+    font-family: "Patrick Hand SC", cursive;
+    letter-spacing: 0.9rem;
+    font-size: 8rem;
+    display: flex;
+    justify-content: justify;
+    align-items: center;
+    top: 2rem;
+    max-width: 50vw;
+    margin-left: 1rem;
+}
+
+.about-content p{
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    line-height: 2.4rem;
+}
+
+/* Style for tab buttons */
+.tab-titles {
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid none;
+}
+.tab-links {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: white;
+    margin-right: 1rem;
+    font-size: 2rem;
+    margin: 1rem;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+.tab-links.active-link {
+    background: none;
+    color: rgb(81, 81, 223);
+}
+
+/* Hide inactive tabs */
+.tab-contents {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    width: 100%;
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+
+.tab-contents.active-tab {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+/* Underline animation */
+.tab-links::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: rgb(81, 81, 223);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-contents ul li span{
+    color: rgb(81, 81, 223);
+    font-size: 1.6rem;
+}
+
+/* --------------CONTACT--------------------- */
+
+        .form-container {
+            background: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 1.8rem;
+            box-shadow: 0.5rem 0.5rem 4rem rgb(81, 81, 223);
+            border-radius: 1.5rem;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 1rem;
+            margin: 0.7rem 0;
+            border: 0.1rem solid #ccc;
+            border-radius: 1rem;
+            font-size: 1.4rem;
+        }
+        #googleSheetsForm button {
+            width: 50%;
+            padding: 1.1rem;
+            background: rgb(81, 81, 223);
+            border: none;
+            color: white;
+            font-size: 1.6rem;
+            border-radius: 20rem;
+            cursor: pointer;
+            margin-top: 0.6rem;
+        }
+        #googleSheetsForm button:hover {
+            background: rgb(81, 81, 223);
+        }
+        #responseMessage {
+            margin-top: 10px;
+            font-size: 14px;
+            color: green;
+        }
+        #message{
+            height: 15rem;
+            resize: none;
+            overflow-y: auto;
+            text-align: justify;
+        }
+
+/*-----------Project Page------------------------------------- */
+
+.webpage{
+    margin: 9rem;
+    padding-top: 3rem;
+}
+
+.webpage h2{
+    font-family: "Patrick Hand SC", cursive;
+    font-size: 6rem;
+}
+
+.project-title{
+    text-decoration: underline;
+    text-decoration-thickness: 0.3rem;
+    text-underline-offset: 0.6rem;
+}
+
+.project-paragraph h5{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;    
+    margin: 1rem 0;
+    color: rgb(81, 81, 223);
+}
+
+.project-paragraph > p{
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+.media-scroller {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.media-element{
+    padding: 0.7rem;
+}
+
+.media-element iframe{
+    border-radius: 1.5rem;
+}
+
+.snap-inline{
+    scroll-snap-type: inline mandatory;
+}
+
+.snap-inline > *{
+    scroll-snap-align: start;
+}
+
+
+
+/* ---------------------------BLOG PAGE------------------------------ */
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    max-width: 90%;
+    margin: 6.5rem;
+    margin-top: 10rem;
+}
+
+.blog-post {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin: 1rem 0; /* Increased spacing */
+    border-radius: 1rem;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: justify;
+}
+
+.blog-post:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+h2 {
+    color: rgb(81, 81, 223); /* Matching the purple shade */
+    font-size: 3rem;
+}
+
+.post-meta {
+    font-size: 1.6rem;
+    color: #bbb;
+}
+
+.post-blog{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(81, 81, 223);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.back-button{
+    background: transparent;
+    color: rgb(81, 81, 223);
+    cursor: pointer;
+}
+
+/* --------------------------------Making it responsive------------------------- */
+
+/* Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 56%;
+    }
+
+    .home-img{
+        margin-left: 3rem;
+    }
+
+    #element{
+        font-size: 3.7rem;
+    }
+
+    .maincontent h1 {
+        font-size: 4rem;
+    }
+
+    .maincontent .spancolor{
+        font-size: 4.5rem;
+    }
+
+    .maincontent h3 {
+        font-size: 2rem;
+    }
+
+    .about-img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-content h1{
+        display: flexbox;
+        text-align: center;
+    }
+
+    .blog-post {
+        max-width: 97%;
+        padding: 2rem;
+    }
+
+    .about {
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .about-img img {
+        width: 50%;
+    }
+
+    .form-container {
+        width: 80%;
+    }
+
+    .webpage {
+        margin: 4rem;
+    }
+}
+
+/* Hide menu by default on mobile */
+.menu-icon {
+    display: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* 📱 Mobile Devices (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    /* Adjust base font size for better readability */
+    html {
+        font-size: 50%;
+        overflow-x: hidden;
+        overscroll-behavior: none;
+        overscroll-behavior-y: contain;
+    }
+
+    header{
+        background: black;
+    }
+
+
+    main, .blog-container {
+        margin-top: 5rem; /* Adjust based on header height */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 100;
+    }
+
+    nav a {
+        display: block;
+        padding: 1.2rem;
+        font-size: 1.8rem;
+    }
+
+    /* Show menu when active */
+    nav.active {
+        display: flex;
+    }
+
+    /* Adjust home section */
+    .Home {
+        flex-direction: column;
+        text-align: center;
+        gap: 4rem;
+    }
+
+    .maincontent h1 {
+        font-size: 2rem;
+    }
+
+    .maincontent h1 .spancolor{
+        font-size: 4rem;
+    }
+
+    .maincontent h3 {
+        font-size: 2rem;
+    }
+
+    #element{
+        font-size: 5rem;
+        display: inline-block;
+        width: 90%;
+        min-height: 16rem;
+    }
+
+    .home-img img {
+        width: 70%;
+    }
+
+    /* Blog Page */
+
+    .blog-container {
+        margin: 2rem;
+        padding: 1.5rem;
+        max-width: 95%;
+    }
+
+    .blog-post {
+        margin-top: 2rem;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .post-meta {
+
+        font-size: 1.3rem;
+    }
+
+    .post-blog {
+        font-size: 1.7rem;
+    }
+
+    .read-more {
+        font-size: 1.6rem;
+    }
+
+    /* About Page */
+    .about {
+        text-align: justify;
+    }
+
+    .about-img img {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .about-content h1 {
+        font-size: 4rem;
+    }
+
+    .about-content p {
+        font-size: 1.6rem;
+
+    }
+
+    /* Contact Form */
+    .form-container {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    /* Projects Page */
+    .webpage {
+        padding-top: 4rem;
+    }
+
+    .webpage h2 {
+        font-size: 4.5rem;
+        padding-top: 2rem;
+    }
+
+    .media-scroller {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* 📱 Mobile Navigation */
+.menu-icon {
+    display: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    /* z-index: 150; */
+}
+
+/* Hide menu by default */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 4rem;
+        cursor: pointer;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #nav-menu.active {
+        display: flex;
+    }
+
+    #nav-menu a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+        font-size: 3rem;
+    }
+}
